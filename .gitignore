@@ -6,3 +6,5 @@ data/Resume/UpdatedResumeDataSet.csv
 data_processing_pipeline/__pycache__/data_loader.cpython-39.pyc
 __pycache__/
 *.pdf
+*.jpg
+*.csv

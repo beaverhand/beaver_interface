@@ -15,11 +15,16 @@ class DataLoader:
 
 class DataCleaner:
     def clean_resume_text(text):
-        text = re.sub(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b', '', text)
-        text = re.sub(r'\b(\+?\d{1,3})?[-. ]?(\(?\d{2,4}\)?)?[-. ]?\d{2,4}[-. ]?\d{2,4}[-. ]?\d{2,9}\b', '', text)
-        text = re.sub(r'http\S+|www\.\S+', '', text)
-        text = re.sub(r'[^A-Za-z0-9.,;:\s]', '', text)
+        # # Remove emails
+        # text = re.sub(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b', '', text)
+        # # Remove phone numbers (matches different international formats)
+        # text = re.sub(r'\b(\+?\d{1,3})?[-. ]?(\(?\d{2,4}\)?)?[-. ]?\d{2,4}[-. ]?\d{2,4}[-. ]?\d{2,9}\b', '', text)
+        # # Remove URLs
+        # text = re.sub(r'http\S+|www\.\S+', '', text)
+        # # Remove unwanted characters (e.g., non-alphanumeric symbols except common punctuation)
+        # text = re.sub(r'[^A-Za-z0-9.,;:\s]', '', text)
+        # Remove multiple spaces
         text = re.sub(r'\s+', ' ', text).strip()
-        text = re.sub(r'\b(Resume|Curriculum Vitae|CV|Profile|Experience|Education|Skills|References)\b', '', text, flags=re.IGNORECASE)
-        
+        # # Remove common resume words (if needed)
+        # text = re.sub(r'\b(Resume|Curriculum Vitae|CV|Profile|Experience|Education|Skills|References)\b', '', text, flags=re.IGNORECASE)
         return text

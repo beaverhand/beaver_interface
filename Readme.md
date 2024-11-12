@@ -51,4 +51,6 @@ mkdir -p /home/roy/beaver_interface/data/Resume
 find /home/roy/beaver_interface/data/temp_resume_dataset -type f -name "*.pdf" -exec mv {} /home/roy/beaver_interface/data/Resume \;
 rm -rf /home/roy/beaver_interface/data/temp_resume_dataset
 
+
+kaggle datasets download madhab/jobposts -p /home/roy/beaver_interface/data/Job_description --unzip
 ```
