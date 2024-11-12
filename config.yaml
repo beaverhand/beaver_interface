@@ -1,0 +1,3 @@
+# data_processing_pipeline configs
+paths:
+  resume_data_csv: "..//data//Resume//UpdatedResumeDataSet.csv"

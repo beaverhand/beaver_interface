@@ -1,6 +1,6 @@
 # Resume Dataset Chroma DB and RAG Implementation
 
-This repository demonstrates the integration of Chroma DB and a Retrieval-Augmented Generation (RAG) model using Llama3, LangChain, and ChromaDB. It includes environment setup, Docker configuration, and frequently used commands to streamline data retrieval and answer generation from the Resume dataset.
+This is an implementation of RAG tool 
 
 ## Introduction
 
@@ -39,4 +39,16 @@ conda install -c conda-forge chromadb -y
 conda install -c conda-forge pypdf2 -y
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
 
+```
 
+
+
+## Data Creation 
+
+```bash
+unzip resume-dataset.zip -d /home/roy/beaver_interface/data/temp_resume_dataset
+mkdir -p /home/roy/beaver_interface/data/Resume
+find /home/roy/beaver_interface/data/temp_resume_dataset -type f -name "*.pdf" -exec mv {} /home/roy/beaver_interface/data/Resume \;
+rm -rf /home/roy/beaver_interface/data/temp_resume_dataset
+
+```
