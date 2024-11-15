@@ -3,4 +3,5 @@ paths:
   resume_data_csv: "..//data//Resume"
 
 embedding_model:
+  name: "sentence-transformers/all-MiniLM-L6-v2"
   path: "../data/embedding_model"
