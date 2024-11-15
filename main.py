@@ -1,14 +1,17 @@
 import streamlit as st
-from backend.resume_parser import parse_resumes_from_drive
-from backend.embedding_generator import generate_embeddings
-from backend.db_handler import add_embeddings_to_db
+from app.bulk_loader import bulk_loader_page
+# from app.ad_hoc_loader import ad_hoc_loader_page
+# from app.top_match import top_match_page
 
-def bulk_loader_page():
-    st.title("Bulk Loader")
-    folder_id = st.text_input("Enter Google Drive Folder ID:")
-    if st.button("Upload Resumes"):
-        with st.spinner("Processing resumes..."):
-            resumes = parse_resumes_from_drive(folder_id)
-            embeddings = generate_embeddings(resumes)
-            add_embeddings_to_db(embeddings)
-            st.success("Resumes uploaded and processed successfully!")
+st.set_page_config(page_title="Candidate Matcher", layout="wide")
+
+PAGES = {
+    "Bulk Loader": bulk_loader_page,
+    # "Ad-hoc Loader": ad_hoc_loader_page,
+    # "Top Match": top_match_page,
+}
+
+st.sidebar.title('Navigation')
+selection = st.sidebar.radio("Go to", list(PAGES.keys()))
+page = PAGES[selection]
+page()

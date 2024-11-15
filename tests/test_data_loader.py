@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch, mock_open
 import pandas as pd
 from io import StringIO
-from data_processing_pipeline.data_loader import DataLoader
+from backend.data_loader import DataLoader
 
 class TestDataLoader(unittest.TestCase):
     @patch('pandas.read_csv')
