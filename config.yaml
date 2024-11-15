@@ -1,3 +1,6 @@
 # data_processing_pipeline configs
 paths:
   resume_data_csv: "..//data//Resume"
+
+embedding_model:
+  path: "../data/embedding_model"
