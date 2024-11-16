@@ -54,3 +54,7 @@ rm -rf /home/roy/beaver_interface/data/temp_resume_dataset
 
 kaggle datasets download madhab/jobposts -p /home/roy/beaver_interface/data/Job_description --unzip
 ```
+
+
+## Misc
+[Miro](https://miro.com/app/board/uXjVLEHfhy4=/)
