@@ -33,7 +33,7 @@ Use the following commands for setting up your environment and running essential
 
 ```bash
 docker run -p 8000:8000 -v /home/roy/chromadb:/chroma/chroma chromadb/chroma
-conda create -n resume_chromadb_env python=3.9
+conda create -n resume_chromadb_env python=3.9 -y
 conda install -c conda-forge streamlit -y
 conda install -c conda-forge chromadb -y
 conda install -c conda-forge pypdf2 -y
@@ -46,13 +46,13 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 ## Data Creation 
 
 ```bash
-unzip resume-dataset.zip -d /home/roy/beaver_interface/data/temp_resume_dataset
+conda activate resume_chromadb_env
+pip install kaggle
+kaggle datasets download snehaanbhawal/resume-dataset -p /home/roy/beaver_interface/data/temp_resume_dataset --unzip
 mkdir -p /home/roy/beaver_interface/data/Resume
 find /home/roy/beaver_interface/data/temp_resume_dataset -type f -name "*.pdf" -exec mv {} /home/roy/beaver_interface/data/Resume \;
 rm -rf /home/roy/beaver_interface/data/temp_resume_dataset
 
-
-kaggle datasets download madhab/jobposts -p /home/roy/beaver_interface/data/Job_description --unzip
 ```
 
 
