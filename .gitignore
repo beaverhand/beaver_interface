@@ -9,4 +9,4 @@ __pycache__/
 *.jpg
 *.csv
 data/embedding_model/*
-utils/data_processing_pipeline.ipynb
+# utils/data_processing_pipeline.ipynb
