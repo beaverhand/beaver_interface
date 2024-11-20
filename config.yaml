@@ -7,7 +7,7 @@ embedding_model:
   path: "../data/embedding_model"
 
 llm_model:
-  model: "Qwen/Qwen1.5-7B-Chat-AWQ"
+  model: "Qwen/Qwen2.5-7B-Instruct-AWQ"
   quantization: "awq"
   # dtype: "half"
   gpu_memory_utilization: 0.95
@@ -15,3 +15,6 @@ llm_model:
   trust_remote_code: true
   # enforce_eager: false
   max_model_len: 8192
+
+llm_model_prompt:
+  

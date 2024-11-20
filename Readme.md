@@ -6,6 +6,15 @@ This is an implementation of RAG tool
 
 The repository provides tools and instructions for creating a Chroma database to store and retrieve information effectively. By implementing RAG, the system enhances information search and ranking, aiming to generate accurate responses to complex queries based on data stored within ChromaDB. This project leverages PyTorch, Streamlit, and several other libraries to facilitate seamless interaction between Chroma DB and RAG.
 
+## Task List:
+```bash
+- [ IN PROGRESS ] Create backend bulk load logic to chroma DB
+- [ ] Create backend single/multi load logic to chroma DB
+- [ ] Create docker image of vLLM and serve through independent server 
+- [ ] Create docker image of chromaDB and serve through independent server 
+
+```
+
 ## Dataset Link: 
 https://www.kaggle.com/datasets/gauravduttakiit/resume-dataset
 
