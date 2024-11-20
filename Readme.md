@@ -8,10 +8,18 @@ The repository provides tools and instructions for creating a Chroma database to
 
 ## Task List:
 ```bash
+*BACK END
 - [ IN PROGRESS ] Create backend bulk load logic to chroma DB
 - [ ] Create backend single/multi load logic to chroma DB
 - [ ] Create docker image of vLLM and serve through independent server 
-- [ ] Create docker image of chromaDB and serve through independent server 
+- [ ] Create docker image of chromaDB and serve through independent server
+- [ ] Figure out secrets management {ID/PASS/CREDIT} 
+
+*FRONT END
+- [ ] Configure OAuth for streamlit
+- [ ] Create streamlit login page
+- [ ] Create streamlit single/multi load page
+
 
 ```
 
