@@ -5,3 +5,13 @@ paths:
 embedding_model:
   name: "sentence-transformers/all-MiniLM-L6-v2"
   path: "../data/embedding_model"
+
+llm_model:
+  model: "Qwen/Qwen1.5-7B-Chat-AWQ"
+  quantization: "awq"
+  # dtype: "half"
+  gpu_memory_utilization: 0.95
+  tensor_parallel_size: 1
+  trust_remote_code: true
+  # enforce_eager: false
+  max_model_len: 8192
