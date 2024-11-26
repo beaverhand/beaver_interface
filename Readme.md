@@ -49,7 +49,7 @@ Use the following commands for setting up your environment and running essential
 ### Docker Command for ChromaDB
 
 ```bash
-docker run -p 8000:8000 -v /home/roy/chromadb:/chroma/chroma chromadb/chroma
+docker run -p 8000:8000 -v /home/roy/chroma_db:/chroma/chroma chromadb/chroma
 conda create -n resume_chromadb_env python=3.9 -y
 conda install -c conda-forge streamlit -y
 conda install -c conda-forge chromadb -y
