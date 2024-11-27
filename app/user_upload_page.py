@@ -24,12 +24,12 @@ if uploaded_file is not None:
     # Show a success message
     st.success(f"Resume successfully uploaded!")
     
-    # Enqueue a task for processing the resume asynchronously
-    task_id = enqueue_resume_processing(file_path)
+    # # Enqueue a task for processing the resume asynchronously
+    # task_id = enqueue_resume_processing(file_path)
     
-#     # Inform the user that the task is being processed
-#     st.info(f"Your resume is being processed in the background. Task ID: {task_id}")
-#     st.write("Feel free to close the application. You will be notified once the summary is ready.")
+    # # Inform the user that the task is being processed
+    # st.info(f"Your resume is being processed in the background. Task ID: {task_id}")
+    # st.write("Feel free to close the application. You will be notified once the summary is ready.")
 
 # Footer message
 st.write("Powered by beaverhand!!!")
