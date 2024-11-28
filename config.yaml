@@ -9,12 +9,25 @@ embedding_model:
 llm_model:
   model: "Qwen/Qwen2.5-7B-Instruct-AWQ"
   quantization: "awq"
-  # dtype: "half"
+  trust_remote_code: true  # mandatory for hf models
   gpu_memory_utilization: 0.95
   tensor_parallel_size: 1
-  trust_remote_code: true
-  # enforce_eager: false
   max_model_len: 8192
+  max_new_tokens: 1500
+  top_p: 0.5
+  temperature: 0.2
+  vllm_kwargs:
+    quantization: "awq"
 
-llm_model_prompt:
+template: |
+  You are an HR specialist. Analyze the following resume and generate a detailed HR report, covering the candidate's:
+  1. Skills and expertise.
+  2. Professional experience and achievements.
+  3. Educational qualifications.
+  4. Strengths and weaknesses.
+  5. Potential roles they are fit for.
+  6. Areas for improvement.
+
+  Resume:
+  {resume}
   

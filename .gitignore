@@ -10,3 +10,4 @@ __pycache__/
 *.csv
 data/embedding_model/*
 # utils/data_processing_pipeline.ipynb
+data/resume_pre_embedding_df.pkl
