@@ -3,7 +3,7 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..')))
 
-from backend.task_queue import enqueue_resume_processing
+# from backend.task_queue import enqueue_resume_processing
 from backend.data_methods import DataLoader
 
 

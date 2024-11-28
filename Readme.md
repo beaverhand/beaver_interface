@@ -11,7 +11,7 @@ The repository provides tools and instructions for creating a Chroma database to
 *BACK END
 - [ IN PROGRESS ] Create backend bulk load logic to chroma DB
 - [ ] Create backend single/multi load logic to chroma DB
-- [ ] Create docker image of vLLM and serve through independent server 
+- [ MAYBE NOT REQUIRED ] Create docker image of vLLM and serve through independent server 
 - [ ] Create docker image of chromaDB and serve through independent server
 - [ ] Figure out secrets management {ID/PASS/CREDIT} 
 
@@ -36,7 +36,12 @@ https://www.kaggle.com/datasets/gauravduttakiit/resume-dataset
 
 ## Architecture Detail
 
-This document will outline the step-by-step architecture for integrating Chroma DB and RAG.
+beaver_interface/backend/batch-job-1-Resume2Chroma.py: 
+```bash
+
+python batch-job-1-Resume2Chroma.py -f < file locs >
+
+```
 
 ### Step 1
 
